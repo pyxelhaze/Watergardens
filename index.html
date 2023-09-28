@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Watergardens</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="topnav" id="myTopnav">
+          <a href="index.html" class="headline">Watergardens</a>
+
+          <a
+            href="#about"
+            class="link standard"
+            data-modal-target="#modal-about"
+            >About</a
+          >
+          <div class="modal" id="modal-about">
+            <div class="modal-header">
+              <div class="title">About Watergardens</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              Watergardens is a small coding exercise for me, but also a memory
+              to my past aquascapes. <br /><br />
+              Plant portrait images are almost all Bucephalandra, beautiful
+              plants that grow endemically in Borneo. The leaves exhibit a
+              metallic effect, and the plants can form submerged inflorescences.
+            </div>
+          </div>
+
+          <a href="tanks.html" class="standard">Tanks</a>
+          <a href="plants.html" class="standard">Plants</a>
+          <a
+            href="javascript:void(0);"
+            class="icon standard"
+            onclick="hamburger()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="slideshow">
+          <img class="mySlides" src="./images/Becken_total/02-18.jpg" />
+          <img class="mySlides" src="./images/Becken_total/02-20.jpg" />
+          <img class="mySlides" src="./images/Becken_total/06-16.jpg" />
+          <img class="mySlides" src="./images/Becken_total/09-16.jpg" />
+          <img class="mySlides" src="./images/Becken_total/11-15.jpg" />
+          <img class="mySlides" src="./images/Becken_total/01-15.jpg" />
+          <img class="mySlides" src="./images/Becken_total/02-14.jpg" />
+          <img class="mySlides" src="./images/Becken_total/03-12.jpg" />
+          <img class="mySlides" src="./images/Becken_total/04-14.jpg" />
+          <img class="mySlides" src="./images/Becken_total/11-15.jpg" />
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside1">
+          <div class="flower">
+            <img class="aside_img1" src="./images/pflanzen/rasen.jpg" />
+          </div>
+          <div class="qoute">
+            <p class="text1">
+              'To know Mother Nature, <br />
+              is to love her <br />
+              smallest creations'.
+            </p>
+            <p class="text2">Takashi Amano</p>
+          </div>
+        </div>
+
+        <div class="aside2">
+          <div class="video1">
+            <video controls>
+              <source src="./videos/feedingfrenzy.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </aside>
+
+      <div class="gallerys">
+        <div class="tanks">Tanks</div>
+        <div class="column tankpics">
+          <img class="tank_img" src="./images/Becken_total/02-18.jpg" alt="" />
+          <img class="tank_img" src="./images/Becken_total/02-20.jpg" alt="" />
+          <img class="tank_img" src="./images/Becken_total/07-19.jpg" alt="" />
+          <a href="tanks.html" class="gallerylink">More Tanks ></a>
+        </div>
+        <div class="plants">Plants</div>
+        <div class="plantbox">
+          <div class="column plantpics">
+            <img
+              class="plant_img"
+              src="./images/pflanzen/miniphantom_stone.jpg"
+              alt=""
+            />
+            <img class="plant_img" src="./images/pflanzen/rasen.jpg" alt="" />
+            <img class="plant_img" src="./images/pflanzen/bud.JPG" alt="" />
+          </div>
+
+          <div class="column plantpics">
+            <img
+              class="plant_img"
+              src="./images/pflanzen/biggerone.jpeg"
+              alt=""
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/miniphantom.JPG"
+              alt=""
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/minigreen_flowering.jpeg"
+              alt=""
+            />
+            <a href="plants.html" class="gallerylink">More Plants > </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>pyxelhaze 2023</p>
+      </footer>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1297 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Mindesthöhe des Seiteninhalts, um den Footer zu schieben */
+  position: relative; /* Relativer Positionierungs-Kontext für den Footer */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+/* nav */
+.topnav {
+  overflow: hidden;
+  background-color: #269900;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #269900;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .text1 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+  }
+  .text2 {
+    font-size: 18px;
+    text-align: end;
+    font-family: 'Parisienne', cursive;
+  }
+
+  /*  header and nav */
+  header {
+    background-color: #269900;
+    float: left;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  .topnav .standard {
+    padding: 5px 15px 0 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .topnav .headline {
+    padding: 015px 15px 15px 15px;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+  }
+  .plants,
+  .tanks {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plants2 {
+    padding: 15px 0 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-height: 175px;
+  }
+  .slideshow {
+    max-width: 350px;
+  }
+  .mySlides {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* aside */
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aside1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 2.5px;
+    background-color: #e5e7ed;
+    box-shadow: 0px 10px 20px 0px #0000004d;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .aside_img1 {
+    width: 100%;
+    border-radius: 7.5px;
+  }
+  .flower {
+    max-width: 190px;
+    padding-right: 37px;
+  }
+
+  .aside2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  video {
+    width: 345px;
+    height: 240px;
+    border-radius: 2.5px;
+    padding-bottom: 15px;
+  }
+
+  /* gallerys */
+
+  .gallerys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  /* Create two equal columns that sits next to each other */
+  .tankpics {
+    max-width: 350px;
+  }
+  .tankpics .tank_img {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+  .tankpics a,
+  .plantpics a {
+    display: flex;
+    float: right;
+    font-weight: 500;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plantpics a {
+    padding-bottom: 10px;
+  }
+  /*  Bildercollage */
+
+  .plantbox {
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  /* Stil für die Bilder in der Collage */
+  .plantpics .plant_img {
+    width: 100%;
+    padding: 0 2px 0 2px;
+    border-radius: 4px;
+  }
+
+  /*  onclick_img */
+
+  /* Stil für das Vollbild-Bild */
+  .full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+  }
+
+  /* footer */
+
+  footer {
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #269900;
+    color: white;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* subsites */
+  .tankbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 55px 0;
+  }
+  .tanks_tankpage {
+    max-width: 350px;
+  }
+
+  .tanks_gallery {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* modals */
+
+  .modal {
+    color: #269900;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid #269900;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 350px;
+    max-width: 90%;
+    max-height: 95%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #269900;
+  }
+
+  .modal-header .title {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #269900;
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+
+  h1 {
+    color: white;
+    padding: 0 15px;
+    font-family: 'Parisienne', cursive;
+  }
+
+  /*  header and nav */
+  header {
+    padding: 0px 0 0px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #269900;
+    float: left;
+  }
+  .topnav .headline {
+    border-right: 1px solid white;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+  }
+  .topnav .standard {
+    padding: 23px 15px 17px 15px;
+    border-right: 1px solid white;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .plants,
+  .tanks {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plants2 {
+    padding: 15px 0 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 0;
+    max-height: 175px;
+  }
+  .slideshow {
+    max-width: 550px;
+  }
+  .mySlides {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* aside */
+
+  .aside1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 2.5px;
+    background-color: #e5e7ed;
+    box-shadow: 0px 10px 20px 0px #0000004d;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .aside_img1 {
+    width: 100%;
+    border-radius: 7.5px;
+  }
+  .flower {
+    max-width: 250px;
+    padding-right: 37px;
+    padding: 15px;
+  }
+  .text1 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+  }
+  .text2 {
+    font-size: 22px;
+    text-align: end;
+    font-family: 'Parisienne', cursive;
+  }
+
+  .aside2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  video {
+    width: 545px;
+    height: 340px;
+    border-radius: 2.5px;
+    padding-bottom: 15px;
+  }
+
+  /* gallerys */
+
+  .gallerys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tankpics {
+    max-width: 550px;
+  }
+  .tankpics .tank_img {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+  .tankpics a,
+  .plantpics a {
+    display: flex;
+    float: right;
+    font-weight: 500;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plantpics a {
+    padding-bottom: 10px;
+  }
+  /*  Bildercollage */
+
+  .plantbox {
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  /* Stil für die Bilder in der Collage */
+  .plantpics .plant_img {
+    width: 100%;
+    padding: 0 2px 0 2px;
+    border-radius: 4px;
+  }
+
+  /*  onclick_img */
+
+  /* Stil für das Vollbild-Bild */
+  .full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+  }
+
+  /* footer */
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #269900;
+    color: white;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* subsites */
+  .tankbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 55px 0;
+  }
+  .tanks_tankpage {
+    max-width: 550px;
+  }
+
+  .tanks_gallery {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* modals */
+
+  .modal {
+    color: #269900;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid #269900;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 350px;
+    max-width: 90%;
+    max-height: 95%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #269900;
+  }
+
+  .modal-header .title {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #269900;
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  h1 {
+    color: white;
+    padding: 0 15px;
+    font-family: 'Parisienne', cursive;
+  }
+
+  /*  header and nav */
+
+  header {
+    padding: 0px 0 0px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #269900;
+    float: left;
+  }
+  .topnav .headline {
+    border-right: 1px solid white;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+  }
+  .topnav .standard {
+    padding: 23px 15px 17px 15px;
+    border-right: 1px solid white;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .plants,
+  .tanks {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plants2 {
+    padding: 15px 0 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 175px 0;
+    max-height: 175px;
+  }
+  .slideshow {
+    max-width: 700px;
+  }
+  .mySlides {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* aside */
+
+  .aside1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 2.5px;
+    background-color: #e5e7ed;
+    box-shadow: 0px 10px 20px 0px #0000004d;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .aside_img1 {
+    width: 100%;
+    border-radius: 7.5px;
+  }
+  .flower {
+    max-width: 300px;
+    padding-right: 37px;
+    padding: 15px;
+  }
+  .text1 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+  }
+  .text2 {
+    font-size: 22px;
+    text-align: end;
+    font-family: 'Parisienne', cursive;
+  }
+
+  .aside2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  video {
+    width: 705px;
+    height: 440px;
+    border-radius: 2.5px;
+    padding-bottom: 15px;
+  }
+
+  /* gallerys */
+
+  .gallerys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tankpics {
+    max-width: 700px;
+  }
+  .tankpics .tank_img {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+  .tankpics a,
+  .plantpics a {
+    display: flex;
+    float: right;
+    font-weight: 500;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plantpics a {
+    padding-bottom: 10px;
+  }
+  .gallerylink {
+    font-size: 18px;
+  }
+  /*  Bildercollage */
+
+  .plantbox {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  /* Stil für die Bilder in der Collage */
+  .plantpics .plant_img {
+    width: 100%;
+    padding: 0 2px 0 2px;
+    border-radius: 4px;
+  }
+
+  /*  onclick_img */
+
+  /* Stil für das Vollbild-Bild */
+  .full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+  }
+
+  /* footer */
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #269900;
+    color: white;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* subsites */
+  .tankbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 55px 0;
+  }
+  .tanks_tankpage {
+    max-width: 700px;
+  }
+
+  .tanks_gallery {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* modals */
+
+  .modal {
+    color: #269900;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid #269900;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 550px;
+    max-width: 90%;
+    max-height: 95%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #269900;
+  }
+
+  .modal-header .title {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #269900;
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  h1 {
+    color: white;
+    padding: 0 15px;
+    font-family: 'Parisienne', cursive;
+  }
+
+  /*  header and nav */
+  header {
+    padding: 0 0 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: #269900;
+    float: left;
+  }
+  .topnav .headline {
+    border-right: 1px solid white;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+  }
+  .topnav .standard {
+    padding: 23px 15px 20px 15px;
+    border-right: 1px solid white;
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .standard:hover {
+    background-color: #2699004b;
+  }
+
+  .plants,
+  .tanks {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plants2 {
+    padding: 15px 0 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0;
+    max-height: 175px;
+  }
+  .slideshow {
+    max-width: 850px;
+  }
+  .mySlides {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* aside */
+
+  .aside1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 2.5px;
+    background-color: #e5e7ed;
+    box-shadow: 0px 10px 20px 0px #0000004d;
+    width: 90%;
+    max-width: 845px;
+    margin: 0 auto;
+  }
+  .aside_img1 {
+    width: 100%;
+    border-radius: 7.5px;
+  }
+  .flower {
+    max-width: 400px;
+    padding-right: 37px;
+    padding: 15px;
+  }
+  .text1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+  }
+  .text2 {
+    font-size: 24px;
+    text-align: end;
+    font-family: 'Parisienne', cursive;
+  }
+
+  .aside2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  video {
+    width: 835px;
+    height: 540px;
+    border-radius: 2.5px;
+    padding-bottom: 15px;
+  }
+
+  /* gallerys */
+
+  .gallerys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tankpics {
+    max-width: 850px;
+  }
+  .tankpics .tank_img {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+  .tankpics a,
+  .plantpics a {
+    display: flex;
+    float: right;
+    font-weight: 500;
+    text-decoration: none;
+    color: #269900;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .plantpics a {
+    padding-bottom: 10px;
+  }
+  .gallerylink {
+    font-size: 18px;
+  }
+  /*  Bildercollage */
+
+  .plantbox {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  /* Stil für die Bilder in der Collage */
+  .plantpics .plant_img {
+    width: 100%;
+    padding: 0 2px 0 2px;
+    border-radius: 4px;
+  }
+
+  /*  onclick_img */
+
+  /* Stil für das Vollbild-Bild */
+  .full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+  }
+
+  /* footer */
+  p {
+    font-size: 0.7em;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #269900;
+    color: white;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .lisboa {
+    padding-left: 50px;
+    color: #e5e7ed;
+  }
+
+  /* subsites */
+  .tankbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 55px 0;
+  }
+  .tanks_tankpage {
+    max-width: 850px;
+  }
+
+  .tanks_gallery {
+    width: 100%;
+    border-radius: 2.5px;
+  }
+
+  /* modals */
+
+  .modal {
+    color: #269900;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid #269900;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 550px;
+    max-width: 90%;
+    max-height: 95%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #269900;
+  }
+
+  .modal-header .title {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #269900;
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}

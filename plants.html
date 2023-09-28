@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Watergardens</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="topnav" id="myTopnav">
+          <a href="index.html" class="headline">Watergardens</a>
+
+          <a
+            href="#about"
+            class="link standard"
+            data-modal-target="#modal-about"
+            >About</a
+          >
+          <div class="modal" id="modal-about">
+            <div class="modal-header">
+              <div class="title">About Watergardens</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              Watergardens is a small coding exercise for me, but also a memory
+              to my past aquascapes. <br /><br />
+              Plant portrait images are almost all Bucephalandra, beautiful
+              plants that grow endemically in Borneo. The leaves exhibit a
+              metallic effect, and the plants can form submerged inflorescences.
+            </div>
+          </div>
+
+          <a href="tanks.html" class="standard">Tanks</a>
+          <a href="plants.html" class="standard">Plants</a>
+          <a
+            href="javascript:void(0);"
+            class="icon standard"
+            onclick="hamburger()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
+      </header>
+
+      <div class="gallerys">
+        <div class="plants2">Plants</div>
+        <div class="plantbox">
+          <div class="column plantpics">
+            <img
+              class="plant_img"
+              src="./images/pflanzen/minigreen_flowering.jpeg"
+            />
+            <img class="plant_img" src="./images/pflanzen/biggerone.jpeg" />
+            <img class="plant_img" src="./images/pflanzen/bud.JPG" />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190501_130658_227.jpg"
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190501_171027_780.jpg"
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190525_184843_994.jpg"
+            />
+          </div>
+          <div class="column plantpics">
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190526_102350_248.jpg"
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190709_154816_264.jpg"
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/IMG_20190915_104556_177.jpg"
+            />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/20180201_172439-01.jpeg"
+            />
+            <img class="plant_img" src="./images/pflanzen/miniphantom.JPG" />
+            <img
+              class="plant_img"
+              src="./images/pflanzen/miniphantom_stone.jpg"
+            />
+            <img class="plant_img" src="./images/pflanzen/rasen.jpg" />
+          </div>
+        </div>
+      </div>
+      <footer><p>pyxelhaze 2023</p></footer>
+    </div>
+    <div id="overlay"></div>
+    <script src="script1.js"></script>
+  </body>
+</html>
